@@ -11,7 +11,7 @@
   <meta property="og:title" content="Ludo Clans — The Master Tactical Tabletop Game">
   <meta property="og:description" content="Command 16 tactical clan figurines across dual battlegrounds with true 3D dice physics and offline Pass & Play.">
   <meta property="og:image" content="assets/ludo_clans_banner.jpg">
-  <meta property="og:url" content="https://ludoclans.com">
+  <meta property="og:url" content="https://ludo-clans-website.vercel.app/">
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ludo Clans — Tactical Tabletop Game">
@@ -28,7 +28,7 @@
           <img src="assets/ludo_clans_icon.png" alt="Ludo Clans Medallion" class="brand-medallion">
           <span class="brand-name">LUDO <span>CLANS</span></span>
         </a>
-        <nav>
+        <nav class="nav-menu" id="navMenu">
           <ul class="nav-links">
             <li><a href="#factions" class="nav-link">Clan Factions</a></li>
             <li><a href="#armory" class="nav-link">16 Figurines</a></li>
@@ -38,10 +38,16 @@
             <li><a href="terms.html" class="nav-link">Terms</a></li>
           </ul>
         </nav>
-        <!-- Strong Creamy 3D Button -->
-        <a href="#download" class="btn-3d btn-creamy">
-          <span class="btn-3d-inner">INSTALL APP</span>
-        </a>
+        <div class="nav-cta-wrap">
+          <a href="#download" class="btn-3d btn-creamy btn-nav-cta">
+            <span class="btn-3d-inner">INSTALL APP</span>
+          </a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -65,7 +71,7 @@
 
           <div class="hero-action-row" id="download">
             <!-- Official Google Play Badge on Strong Creamy Plinth -->
-            <a href="https://play.google.com/store/apps/details?id=com.alphanor.ludo_clans" target="_blank" rel="noopener" class="btn-play-creamy">
+            <a href="https://play.google.com/store/apps/details?id=com.ludoclans.game" target="_blank" rel="noopener" class="btn-play-creamy">
               <svg class="play-logo" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M3.609 1.814L13.793 12 3.61 22.186c-.347-.31-.56-.763-.56-1.286V3.1c0-.523.213-.976.56-1.286z"/>
                 <path fill="#FBBC05" d="M14.851 13.058l2.127 2.127-11.83 6.76 9.703-8.887z"/>
@@ -608,15 +614,35 @@
           <a href="mailto:ludoclanshelp@duck.com">Developer Support</a>
         </nav>
         <p class="footer-copy">
-          &copy; 2026 Ludo Clans. All rights reserved. Crafted with physical tabletop physics and family-first gaming ethics.
+          &copy; 2026 Alphanor Studios. All rights reserved. Crafted with physical tabletop physics and family-first gaming ethics.
         </p>
       </div>
     </footer>
   </div>
 
-  <!-- Interactive Armory Filter Script -->
+  <!-- Interactive Scripts (Armory Filter & Mobile Navigation) -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Mobile Navigation Drawer Toggle
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          navToggle.classList.toggle('active');
+          navMenu.classList.toggle('open');
+        });
+
+        // Auto-close when clicking any link
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('open');
+          });
+        });
+      }
+
+      // Armory Tab Filtering
       const tabBtns = document.querySelectorAll('.armory-tab-btn');
       const cards = document.querySelectorAll('.armory-card');
 

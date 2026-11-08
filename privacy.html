@@ -11,6 +11,7 @@
   <meta property="og:title" content="Privacy Policy — Ludo Clans">
   <meta property="og:description" content="Official Privacy Policy for Ludo Clans: zero data harvesting, offline-first storage, family COPPA compliance, and voluntary rewarded-only ads.">
   <meta property="og:image" content="assets/ludo_clans_banner.jpg">
+  <meta property="og:url" content="https://ludo-clans-website.vercel.app/privacy.html">
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy Policy — Ludo Clans">
@@ -27,7 +28,7 @@
           <img src="assets/ludo_clans_icon.png" alt="Ludo Clans Medallion" class="brand-medallion">
           <span class="brand-name">LUDO <span>CLANS</span></span>
         </a>
-        <nav>
+        <nav class="nav-menu" id="navMenu">
           <ul class="nav-links">
             <li><a href="index.html#factions" class="nav-link">Clan Factions</a></li>
             <li><a href="index.html#arenas" class="nav-link">Battle Arenas</a></li>
@@ -36,9 +37,16 @@
             <li><a href="terms.html" class="nav-link">Terms</a></li>
           </ul>
         </nav>
-        <a href="index.html#download" class="btn-3d btn-creamy">
-          <span class="btn-3d-inner">PLAY FREE</span>
-        </a>
+        <div class="nav-cta-wrap">
+          <a href="index.html#download" class="btn-3d btn-creamy btn-nav-cta">
+            <span class="btn-3d-inner">PLAY FREE</span>
+          </a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -64,7 +72,7 @@
 
           <h2>1. Introduction & Overview</h2>
           <p>
-            Welcome to <strong>Ludo Clans</strong> ("we", "our", or "the App"). We are deeply committed to protecting the privacy of our players. This Privacy Policy details our practices regarding data collection, usage, and disclosure when you install and play Ludo Clans on mobile platforms.
+            Welcome to <strong>Ludo Clans</strong> (Application ID: <code>com.ludoclans.game</code>), developed and published by <strong>Alphanor Studios</strong> ("we", "our", or "the Game"). We are deeply committed to protecting the privacy of our players. This Privacy Policy details our practices regarding data collection, usage, and disclosure when you install and play Ludo Clans on mobile platforms.
           </p>
 
           <h2>2. Information Collection & Storage</h2>
@@ -92,7 +100,7 @@
               <strong>Google AdMob:</strong> Used exclusively for voluntary rewarded video ads (e.g., watching a brief video to claim bonus in-game currency). We strictly prohibit intrusive interstitial ads during active matches. Google may collect and process device advertising identifiers in accordance with the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
             </li>
             <li>
-              <strong>Google Play In-App Billing:</strong> If virtual items are purchased, payment processing is handled entirely by Google Play. We never receive or store credit card numbers, billing addresses, or banking details.
+              <strong>No Real-Money Purchases:</strong> Ludo Clans does not offer real-world monetary in-app purchases or subscriptions. All virtual currency (Coins and Gems) and clan figurines are unlocked purely through in-game gameplay, daily tributes, and voluntary rewarded video ads.
             </li>
           </ul>
 
@@ -135,9 +143,9 @@
           </p>
           <div class="legal-wood-box">
             <p>
-              <strong>Email:</strong> <a href="mailto:ludoclanshelp@duck.com" style="color: var(--text-mahogany); font-weight: 700;">ludoclanshelp@duck.com</a><br>
-              <strong>Developer:</strong> Ludo Clans Development Team<br>
-              <strong>Website:</strong> <a href="index.html" style="color: var(--text-mahogany); font-weight: 700;">https://ludoclans.vercel.app</a>
+              <strong>Developed & Published by:</strong> Alphanor Studios<br>
+              <strong>Support Email:</strong> <a href="mailto:ludoclanshelp@duck.com" style="color: var(--text-mahogany); font-weight: 700;">ludoclanshelp@duck.com</a><br>
+              <strong>Website:</strong> <a href="https://ludo-clans-website.vercel.app/" target="_blank" rel="noopener" style="color: var(--text-mahogany); font-weight: 700;">https://ludo-clans-website.vercel.app/</a>
             </p>
           </div>
         </section>
@@ -160,10 +168,30 @@
           <a href="mailto:ludoclanshelp@duck.com">Developer Support</a>
         </nav>
         <p class="footer-copy">
-          &copy; 2026 Ludo Clans. All rights reserved.
+          &copy; 2026 Alphanor Studios. All rights reserved.
         </p>
       </div>
     </footer>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          navToggle.classList.toggle('active');
+          navMenu.classList.toggle('open');
+        });
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('open');
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
