@@ -1,0 +1,1016 @@
+/* ===================================================================
+   LUDO CLANS — REFINED TABLETOP LUXURY MASTER STYLESHEET
+   • Harmonious Royal Sapphire Canvas (#1565C0 -> #0D47A1 -> #062354)
+   • Sleek Midnight Sapphire Header & Footer with Warm Bronze/Gold Trim
+   • Rich Golden-Cream Silk 3D Buttons (#FFF6D6 -> #FBE39A -> #F5CF70)
+   • Warm Creamy Parchment Cards with Handcrafted Ledger Details
+   • High-Contrast Chiseled Cream Headings & Professional Studio Copy
+   • 100% Vector Icons • Zero AI Slop
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* 1. Royal Sapphire Felt Canvas */
+  --royal-top: #1565C0;
+  --royal-mid: #0D47A1;
+  --royal-deep: #062354;
+  --royal-darkest: #04142D;
+
+  /* 2. Harmonious Midnight Sapphire (Header, Footer, HUD) */
+  --nav-bg: rgba(6, 18, 38, 0.94);
+  --nav-border: rgba(212, 163, 115, 0.4);
+  --footer-bg: linear-gradient(180deg, #071731 0%, #030B18 100%);
+
+  /* 3. Rich "Strong Creamy" Palette (Buttons, Headings & Badges) */
+  --cream-pure: #FFFFFF;
+  --cream-top: #FFF8E1;
+  --cream-strong-top: #FFF5D0;
+  --cream-strong-mid: #FCE196;
+  --cream-strong-bottom: #F5CD6A;
+  --cream-bevel: #A86208;
+  --cream-shadow: #4A2500;
+
+  /* 4. Antique Parchment (Cards & Reading Surfaces) */
+  --parchment-light: #FFFDF8;
+  --parchment-mid: #F7EFE1;
+  --parchment-dark: #EFE2CD;
+  --border-warm: #D4A373;
+  --border-toasted: #B88554;
+  --text-mahogany: #2A1403;
+  --text-warm-muted: #6B4E31;
+
+  /* 5. Gold & Brass Tabletop Accents */
+  --gold-leaf: #FFD54F;
+  --gold-glow: #FFE082;
+  --gold-deep: #B45309;
+
+  /* 6. Shadows */
+  --card-shadow: 0 14px 32px rgba(0, 0, 0, 0.4), 0 3px 8px rgba(0, 0, 0, 0.25);
+  --plinth-shadow: 0 16px 36px rgba(2, 8, 20, 0.6);
+  --btn-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(130% 95% at 50% 0%, var(--royal-top) 0%, var(--royal-mid) 40%, var(--royal-deep) 78%, var(--royal-darkest) 100%);
+  background-attachment: fixed;
+  color: var(--parchment-mid);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Tactile Felt Tabletop Weave */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(0, 0, 0, 0.25) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===================================================================
+   SLEEK MIDNIGHT SAPPHIRE HEADER (Blends naturally with the game)
+   =================================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  border-bottom: 2px solid var(--nav-border);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0.85rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+}
+
+.brand-medallion {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-leaf);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  background: var(--royal-mid);
+}
+
+.brand-name {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.06rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF3D6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.brand-name span {
+  background: linear-gradient(180deg, #FFF9C4 0%, var(--gold-leaf) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  letter-spacing: 0.02rem;
+  transition: all 0.2s ease;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-leaf);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ===================================================================
+   STRONG CREAMY 3D EXTRUDED BUTTONS (Rich Custard Cream & Mahogany Text)
+   =================================================================== */
+.btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 0.16rem;
+  transition: transform 0.1s ease;
+  user-select: none;
+}
+
+.btn-3d:active {
+  transform: translateY(3px);
+}
+
+.btn-3d-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  letter-spacing: 0.04rem;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.85);
+}
+
+/* Strong Creamy 3D Button */
+.btn-creamy {
+  background: var(--cream-bevel);
+  box-shadow: var(--btn-shadow);
+  border: 1px solid var(--border-toasted);
+}
+
+.btn-creamy .btn-3d-inner {
+  background: linear-gradient(180deg, var(--cream-strong-top) 0%, var(--cream-strong-mid) 50%, var(--cream-strong-bottom) 100%);
+  color: var(--text-mahogany);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+  box-shadow: inset 0 -3.5px 0 var(--border-toasted);
+}
+
+.btn-creamy:hover {
+  filter: brightness(1.04);
+}
+
+/* Google Play Badge on Strong Creamy Plinth */
+.btn-play-creamy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: linear-gradient(180deg, var(--cream-strong-top) 0%, var(--cream-strong-mid) 50%, var(--cream-strong-bottom) 100%);
+  border: 2px solid var(--border-toasted);
+  border-radius: 14px;
+  padding: 0.62rem 1.45rem;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35), inset 0 -3.5px 0 var(--border-toasted);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-play-creamy:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45), inset 0 -3.5px 0 var(--cream-bevel);
+}
+
+.play-logo {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.play-text-stack {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.play-sub {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #78350F;
+  letter-spacing: 0.06rem;
+  line-height: 1;
+}
+
+.play-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  line-height: 1.15;
+  letter-spacing: 0.02rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* ===================================================================
+   HERO SECTION & STRONG CREAMY HEADINGS
+   =================================================================== */
+.hero-section {
+  max-width: 1220px;
+  margin: 3.5rem auto 4.5rem auto;
+  padding: 0 1.8rem;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Strong Creamy Pill Tag */
+.hero-cream-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.38rem 1.05rem;
+  background: linear-gradient(180deg, var(--cream-strong-top) 0%, var(--cream-strong-mid) 100%);
+  border: 1.8px solid var(--border-toasted);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.hero-pill-gem {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFE082 0%, var(--gold-deep) 100%);
+  box-shadow: 0 0 4px var(--gold-leaf);
+}
+
+/* High-Contrast Creamy Chiseled Headline */
+.hero-title {
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0.02rem;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF4D0 40%, #FCE08F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.75));
+}
+
+.hero-title span {
+  display: block;
+  background: linear-gradient(180deg, #FFF9C4 0%, var(--gold-leaf) 60%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 8px rgba(78, 39, 3, 0.8));
+}
+
+.hero-desc {
+  font-size: 1.15rem;
+  color: #F1F5F9;
+  line-height: 1.6;
+  max-width: 540px;
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.8rem;
+}
+
+/* Hero Showcase Frame */
+.hero-stage-plinth {
+  position: relative;
+  background: linear-gradient(180deg, #091A36 0%, #040D1D 100%);
+  border: 2.5px solid var(--border-warm);
+  border-radius: 24px;
+  padding: 0.75rem;
+  box-shadow: var(--plinth-shadow);
+}
+
+.hero-stage-inner {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 213, 79, 0.35);
+  background: #020A17;
+}
+
+.hero-stage-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Corner Antique Brass Studs */
+.corner-stud {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFE082 0%, var(--gold-deep) 70%, #4A2500 100%);
+  box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  z-index: 3;
+}
+
+.stud-tl { top: 6px; left: 6px; }
+.stud-tr { top: 6px; right: 6px; }
+.stud-bl { bottom: 6px; left: 6px; }
+.stud-br { bottom: 6px; right: 6px; }
+
+/* Inset Creamy Badge Overlay */
+.stage-creamy-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: linear-gradient(180deg, var(--parchment-light) 0%, var(--parchment-mid) 100%);
+  border: 2px solid var(--border-warm);
+  border-radius: 14px;
+  padding: 0.75rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.0rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+}
+
+.stage-fig-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.stage-badge-info h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  margin-bottom: 0.1rem;
+}
+
+.stage-badge-info p {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #78350F;
+  text-transform: uppercase;
+}
+
+/* ===================================================================
+   SECTION HEADINGS & BADGES
+   =================================================================== */
+.section-wrapper {
+  max-width: 1220px;
+  margin: 0 auto 5rem auto;
+  padding: 0 1.8rem;
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.8rem auto;
+}
+
+.section-cream-badge {
+  display: inline-block;
+  padding: 0.35rem 1.1rem;
+  background: linear-gradient(180deg, var(--cream-strong-top) 0%, var(--cream-strong-mid) 100%);
+  border: 1.8px solid var(--border-toasted);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.section-heading {
+  font-size: clamp(2.0rem, 4vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF4D0 40%, #FCE08F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.75));
+}
+
+.section-subtext {
+  font-size: 1.1rem;
+  color: #E2E8F0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================================================
+   CREAMY PARCHMENT FACTION CARDS
+   =================================================================== */
+.factions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  gap: 1.8rem;
+}
+
+.creamy-parchment-card {
+  position: relative;
+  background: linear-gradient(180deg, var(--parchment-light) 0%, var(--parchment-mid) 50%, var(--parchment-dark) 100%);
+  border: 2.5px solid var(--border-warm);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.creamy-parchment-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold-leaf);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 213, 79, 0.3);
+}
+
+/* Artwork Chamber */
+.card-art-chamber {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #020C1F;
+  border-bottom: 2px solid var(--border-warm);
+}
+
+.card-art-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.creamy-parchment-card:hover .card-art-img {
+  transform: scale(1.06);
+}
+
+.card-token-fig {
+  position: absolute;
+  bottom: 8px;
+  right: 14px;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.65));
+  transition: transform 0.25s ease;
+  z-index: 2;
+}
+
+.creamy-parchment-card:hover .card-token-fig {
+  transform: scale(1.15) translateY(-3px);
+}
+
+/* Faction Badge */
+.faction-pill-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.pill-red { background: linear-gradient(135deg, #D32F2F, #7F0000); border: 1.5px solid #FF8A80; }
+.pill-green { background: linear-gradient(135deg, #00C853, #004D20); border: 1.5px solid #B9F6CA; }
+.pill-yellow { background: linear-gradient(135deg, #FFB300, #E65100); border: 1.5px solid #FFE082; color: #2E1805; }
+.pill-blue { background: linear-gradient(135deg, #1976D2, #0D47A1); border: 1.5px solid #82B1FF; }
+
+/* Creamy Parchment Body */
+.card-creamy-body {
+  position: relative;
+  z-index: 2;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-creamy-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  margin-bottom: 0.2rem;
+}
+
+.card-creamy-sub {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #78350F;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.card-creamy-desc {
+  font-size: 0.98rem;
+  color: var(--text-warm-muted);
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* ===================================================================
+   DUAL ARENAS (Midnight Sapphire Chassis with Creamy Insets)
+   =================================================================== */
+.arenas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.arena-card-wrap {
+  position: relative;
+  background: linear-gradient(180deg, #091A36 0%, #040D1D 100%);
+  border: 2.5px solid var(--border-warm);
+  border-radius: 22px;
+  padding: 0.75rem;
+  box-shadow: var(--plinth-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.arena-inner-chassis {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 213, 79, 0.35);
+  background: linear-gradient(180deg, var(--parchment-light) 0%, var(--parchment-mid) 100%);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.arena-board-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid var(--border-warm);
+}
+
+.arena-body {
+  padding: 1.5rem;
+}
+
+.arena-body h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  margin-bottom: 0.5rem;
+}
+
+.arena-body p {
+  font-size: 1.0rem;
+  color: var(--text-warm-muted);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ===================================================================
+   TABLETOP FEATURES
+   =================================================================== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+
+.feature-parchment-box {
+  position: relative;
+  background: linear-gradient(180deg, var(--parchment-light) 0%, var(--parchment-mid) 100%);
+  border: 2px solid var(--border-warm);
+  border-radius: 18px;
+  padding: 1.8rem 1.6rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease;
+}
+
+.feature-parchment-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold-leaf);
+}
+
+.feature-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--cream-strong-top) 0%, var(--cream-strong-bottom) 100%);
+  border: 2px solid var(--border-toasted);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-mahogany);
+  margin-bottom: 1.1rem;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  margin-bottom: 0.4rem;
+}
+
+.feature-desc {
+  font-size: 0.98rem;
+  color: var(--text-warm-muted);
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* ===================================================================
+   LEGAL DOCUMENTS (Creamy Parchment Scroll Layout)
+   =================================================================== */
+.legal-scroll-wrap {
+  max-width: 900px;
+  margin: 3.5rem auto 5.5rem auto;
+  padding: 0 1.8rem;
+  width: 100%;
+}
+
+.legal-parchment-card {
+  position: relative;
+  background: linear-gradient(180deg, var(--parchment-light) 0%, var(--parchment-mid) 60%, var(--parchment-dark) 100%);
+  border: 3px solid var(--border-warm);
+  border-radius: 24px;
+  padding: 3.2rem 2.8rem;
+  box-shadow: var(--plinth-shadow);
+  color: var(--text-mahogany);
+}
+
+.legal-header {
+  border-bottom: 2px solid var(--parchment-dark);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.legal-header h1 {
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-mahogany);
+  margin-bottom: 0.4rem;
+}
+
+.legal-meta {
+  font-size: 0.95rem;
+  color: var(--text-warm-muted);
+  font-weight: 600;
+}
+
+.legal-content h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.legal-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  margin-top: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.legal-content p, .legal-content ul {
+  font-size: 1.02rem;
+  color: #382413;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.legal-content ul {
+  padding-left: 1.6rem;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-wood-box {
+  background: rgba(212, 163, 115, 0.22);
+  border-left: 4.5px solid var(--gold-deep);
+  padding: 1.1rem 1.4rem;
+  border-radius: 0 10px 10px 0;
+  margin: 1.6rem 0;
+}
+
+.legal-wood-box p {
+  margin: 0;
+  font-weight: 600;
+  color: #2E1805;
+}
+
+/* ===================================================================
+   MIDNIGHT SAPPHIRE FOOTER (Harmonious & Sleek)
+   =================================================================== */
+.footer {
+  margin-top: auto;
+  background: var(--footer-bg);
+  border-top: 2px solid var(--nav-border);
+  box-shadow: inset 0 2px 0 rgba(255, 213, 79, 0.2);
+  padding: 3.5rem 1.8rem 2.5rem 1.8rem;
+}
+
+.footer-inner {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-size: 1.0rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--gold-leaf);
+}
+
+.footer-copy {
+  color: #94A3B8;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===================================================================
+   16-FIGURINE TABLETOP ARMORY SHOWCASE
+   =================================================================== */
+.armory-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.2rem;
+}
+
+.armory-tab-btn {
+  background: var(--nav-bg);
+  border: 1.5px solid var(--border-warm);
+  color: var(--parchment-mid);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.armory-tab-btn:hover {
+  border-color: var(--gold-leaf);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.armory-tab-btn.active {
+  background: linear-gradient(180deg, var(--cream-strong-top) 0%, var(--cream-strong-mid) 50%, var(--cream-strong-bottom) 100%);
+  color: var(--text-mahogany);
+  border-color: var(--border-toasted);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 -2px 0 var(--border-toasted);
+}
+
+.armory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.armory-card {
+  position: relative;
+  background: linear-gradient(180deg, var(--parchment-light) 0%, var(--parchment-mid) 50%, var(--parchment-dark) 100%);
+  border: 2px solid var(--border-warm);
+  border-radius: 18px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.armory-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-leaf);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 213, 79, 0.35);
+}
+
+.armory-card-chamber {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14, 26, 43, 0.85) 0%, rgba(4, 13, 29, 0.95) 75%);
+  border: 2px solid rgba(212, 163, 115, 0.45);
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.6), 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.0rem;
+}
+
+.armory-card:hover .armory-card-chamber {
+  border-color: var(--gold-leaf);
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 213, 79, 0.4);
+}
+
+.armory-fig-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.65));
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.armory-card:hover .armory-fig-img {
+  transform: scale(1.12) translateY(-4px);
+}
+
+.armory-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.armory-fig-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-mahogany);
+  margin-bottom: 0.25rem;
+}
+
+.armory-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.armory-color-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.armory-clan-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #78350F;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+}
+
+.armory-ability-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-warm-muted);
+  background: rgba(212, 163, 115, 0.2);
+  border: 1px solid rgba(212, 163, 115, 0.4);
+  padding: 0.2rem 0.65rem;
+  border-radius: 10px;
+  margin-top: 0.25rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 960px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+    margin-top: 2rem;
+  }
+  .nav-links {
+    gap: 1.0rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .legal-parchment-card {
+    padding: 2.2rem 1.4rem;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .nav-container {
+    padding: 0.8rem 1.2rem;
+  }
+}
