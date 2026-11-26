@@ -1,0 +1,22 @@
+# Ludo Clans
+
+> Official offline-first 3D tabletop board game for Android by Alphanor Studios.
+
+## Official Download
+- **Google Play Store:** https://play.google.com/store/apps/details?id=com.ludoclans.game
+- **Package ID:** `com.ludoclans.game`
+- **Official Website:** https://ludo-clans-website.vercel.app/
+- **Support:** ludoclanshelp@duck.com
+
+## Overview
+Ludo Clans combines classic 15x15 Ludo and 100-Tile Snakes & Ladders with collectible 3D hero squads, tactile 3D dice physics, smart offline AI bots, and 2-4 player Pass & Play on a single device—with zero forced mid-match ads.
+
+## Launch Clans & Modes
+- **Clans:** Cyber Knights, Starlight Idols, Emerald Drakes, Storm Shinobi, Crystal Royalty (Cyber Knights and Starlight Idols unlocked free at launch).
+- **Modes:** Pass & Play (2-4 players), Vs Smart Bot AI (Casual & Competitive), 100-Tile Snakes & Ladders, Classic Fast & Fantasy FX modes.
+
+## Policies
+- **Privacy Policy:** https://ludo-clans-website.vercel.app/privacy.html
+- **Terms of Service:** https://ludo-clans-website.vercel.app/terms.html
+- **app-ads.txt:** https://ludo-clans-website.vercel.app/app-ads.txt
+
